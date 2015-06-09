@@ -26,6 +26,10 @@
             android:name=".MessagerieActivity"
             android:label="@string/title_activity_messagerie" >
         </activity>
+        <activity
+            android:name=".Testgithub"
+            android:label="@string/title_activity_testgithub" >
+        </activity>
     </application>
 
 </manifest>
