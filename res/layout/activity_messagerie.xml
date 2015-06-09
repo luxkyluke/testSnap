@@ -9,7 +9,7 @@
     tools:context="com.example.testsnap.MessagerieActivity" >
 
     <ListView
-        android:id="@+id/sampleListView"
+        android:id="@+id/list"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_alignParentBottom="true"
