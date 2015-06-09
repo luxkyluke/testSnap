@@ -3,6 +3,7 @@ package com.example.testsnap;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -15,6 +16,7 @@ public class LoginActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_login);
+		Log.d("SNAP","demarrage");
 	}
 
 	@Override
@@ -27,12 +29,15 @@ public class LoginActivity extends Activity {
 	public void login(View v){
 		EditText login;
 		login = (EditText) findViewById (R.id.identifiant);
+		
 		String log = login.getText().toString();
+		Log.d("SNAP",log);
 		EditText pass;
 		pass = (EditText) findViewById (R.id.passwrd);
 		String passd = pass.getText().toString();
+		Log.d("SNAP",passd);
 		Intent intent = new Intent(this, MessagerieActivity.class);
-		
+		Log.d("SNAP","test");
 		Toast.makeText(getApplicationContext(), (String) log, Toast.LENGTH_SHORT).show();
 		Toast.makeText(getApplicationContext(), (String) passd, Toast.LENGTH_SHORT).show();
 		startActivity(intent);

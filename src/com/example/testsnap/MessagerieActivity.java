@@ -1,13 +1,37 @@
 package com.example.testsnap;
 
-import android.app.Activity;
+import java.util.ArrayList;
+
+import android.app.ListActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.util.Log;
+import android.widget.ArrayAdapter;
 
-public class MessagerieActivity extends Activity {
+public class MessagerieActivity extends ListActivity {
+    ArrayList<String> list;
+    ArrayAdapter<String> adaptor;
 
-	@Override
+    /** Called when the activity is first created. */
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+    	super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_messagerie);
+	    Log.d("SNAP","messagerie");
+	    list = new ArrayList<String>();
+	    addContact("Florian");
+	    addContact("Ioana");
+	
+	     adaptor = new ArrayAdapter<String>(this, R.layout.list_item, list);
+	
+	    setListAdapter(adaptor);
+    }
+
+    public void addContact(String name) {
+    list.add(name);
+    adaptor.notifyDataSetChanged();
+    }
+}
+	/*@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_messagerie);
@@ -31,4 +55,5 @@ public class MessagerieActivity extends Activity {
 		}
 		return super.onOptionsItemSelected(item);
 	}
-}
+}*/
+
