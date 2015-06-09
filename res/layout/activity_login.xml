@@ -8,9 +8,39 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.testsnap.LoginActivity" >
 
-    <TextView
+    <EditText
+        android:id="@+id/identifiant"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:layout_alignBottom="@+id/passwrd"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="51dp"
+        android:ems="10"
+        android:hint="Identifiant" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/passwrd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/identifiant"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="89dp"
+        android:ems="10"
+        android:hint="Mot de Passe"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/buttonValide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/passwrd"
+        android:layout_marginRight="68dp"
+        android:layout_marginTop="132dp"
+        android:onClick="login"
+        android:text="Valider" />
 
 </RelativeLayout>
