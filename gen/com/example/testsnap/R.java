@@ -28,8 +28,8 @@ public final class R {
         public static final int action_settings=0x7f080004;
         public static final int buttonValide=0x7f080002;
         public static final int identifiant=0x7f080000;
-        public static final int list=0x7f080003;
         public static final int passwrd=0x7f080001;
+        public static final int sampleListView=0x7f080003;
     }
     public static final class layout {
         public static final int activity_login=0x7f030000;
