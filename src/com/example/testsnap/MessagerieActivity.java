@@ -3,33 +3,57 @@ package com.example.testsnap;
 import java.util.ArrayList;
 
 import android.app.ListActivity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
 public class MessagerieActivity extends ListActivity {
     ArrayList<String> list;
     ArrayAdapter<String> adaptor;
-
+    
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
     	super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_messagerie);
-	    Log.d("SNAP","messagerie");
+		//setContentView(R.layout.activity_messagerie);
 	    list = new ArrayList<String>();
-	    addContact("Florian");
-	    addContact("Ioana");
+	    list.add("Florian");
+	    list.add("Ioana");
 	
-	     adaptor = new ArrayAdapter<String>(this, R.layout.list_item, list);
-	
+	    adaptor = new ArrayAdapter<String>(this, R.layout.list_item, list);
+	    
 	    setListAdapter(adaptor);
+	    //ListView listVu = R.id.list;
+	    //final ListView listview = (ListView) findViewById(R.id.list);
+	    /*listview.setOnItemClickListener(new OnItemClickListener() {
+
+			@Override
+			public void onItemClick(AdapterView<?> parent, View view,
+					int position, long id) {
+				Intent intent = new Intent(getBaseContext(), AffichageActivity.class);
+		    	Log.d("Snap", "Je commence l'activité photo");
+		    	startActivity(intent);
+			}
+	    });*/
     }
 
-    public void addContact(String name) {
-    list.add(name);
-    adaptor.notifyDataSetChanged();
+    
+    public void affichage(View v){
+    	Intent intent = new Intent(this, AffichageActivity.class);
+    	Log.d("Snap", "Je commence l'activité photo");
+    	startActivity(intent);
     }
+    
+    /*public void addContact(String name) {
+	    list.add(name);
+	    adaptor.notifyDataSetChanged();
+    }*/
 }
 	/*@Override
 	protected void onCreate(Bundle savedInstanceState) {

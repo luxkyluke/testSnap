@@ -18,6 +18,7 @@
         android:cacheColorHint="@android:color/transparent"
         android:divider="#CCCCCC"
         android:dividerHeight="1dp"
+        android:onClick="affichage"
         android:paddingLeft="2dp" >
     </ListView>
 

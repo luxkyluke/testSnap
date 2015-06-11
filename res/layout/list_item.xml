@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TextView xmlns:android="http://schemas.android.com/apk/res/android"    
-    android:layout_width="fill_parent"    
-    android:layout_height="fill_parent"    
-    android:padding="10dp"    
-    android:textSize="16sp" >
-</TextView>
+<layout>
+    <TextView xmlns:android="http://schemas.android.com/apk/res/android"    
+	    android:layout_width="fill_parent"    
+	    android:layout_height="fill_parent"    
+	    android:padding="10dp"    
+	    android:textSize="16sp" >
+	</TextView>
+	<Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/passwrd"
+        android:layout_marginRight="68dp"
+        android:layout_marginTop="132dp"
+        android:onClick="login"
+        android:text="Valider" />
+
+</layout>
